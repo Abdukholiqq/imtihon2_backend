@@ -15,7 +15,7 @@
         "time": "13:04",
         "category_name": "IT",
         "sub_category": "Web dasturlash",
-        "saw": 2,
+        "saw": 3,
         "isActive": true,
         "post_id": 2
     },
@@ -278,5 +278,23 @@
         "saw": 3,
         "isActive": true,
         "post_id": 14
+    },
+    {
+        "img": "1685549908430images.jpg",
+        "full_name": "Ferrari company",
+        "profession": "Dizayn",
+        "direction": "Dizayn",
+        "int_direction": "Grafik dizayn",
+        "event": "meeting",
+        "link": "https://www.ferrari.com",
+        "phone_number": "998788889888 ",
+        "additional_number": "998788889888",
+        "post_title": "Ferari f8",
+        "post_desc": "Ferrari S.p.A. is an Italian luxury sports car manufacturer based in Maranello, Italy.",
+        "date": "05-31-23",
+        "time": "8:51",
+        "saw": 1,
+        "isActive": true,
+        "post_id": 15
     }
 ]

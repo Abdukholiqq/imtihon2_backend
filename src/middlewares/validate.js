@@ -1,5 +1,6 @@
+import { read } from "../utils/model.js";
 import { LoginSchema, PostSchema } from "../utils/validation.js";
-
+const Posts = read("posts");
 export default (req, res, next) => {
   try {
     if (req.url == "/login" && req.method == "POST") {
@@ -44,7 +45,7 @@ export default (req, res, next) => {
         category_name,
         sub_category,
       });
-      if (error) throw Error(error);
+      // if (error) throw Error(error);
     }
     next();
   } catch (error) {

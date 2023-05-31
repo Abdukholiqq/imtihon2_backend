@@ -4,62 +4,62 @@ import { resolve } from "path";
 
 //   create new post
 const POST = (req, res) => {
-  try {
-    const Posts = read("posts");
-    const {
-      date,
-      time,
-      direction,
-      int_direction,
-      event,
-      link,
-      full_name,
-      profession,
-      phone_number,
-      additional_number,
-      post_title,
-      post_desc,
-      category_name,
-      sub_category,
-    } = req.body;
-    const { img } = req.files;
-    // ----------------
-    const filePath = Date.now() + img.name.replace(/\s/g, "");
-    // ----------------
-    const newPost = {
-      post_id: Posts.at(-1)?.post_id + 1 || 1,
-      img: filePath,
-      full_name,
-      profession,
-      direction,
-      int_direction,
-      event,
-      link,
-      phone_number,
-      additional_number,
-      post_title,
-      post_desc,
-      date,
-      time,
-      category_name,
-      sub_category,
-      saw: 0,
-      isActive: false,
-    };
-    // -------------
+  // try {
+  const Posts = read("posts");
+  const {
+    date,
+    time,
+    direction,
+    int_direction,
+    event,
+    link,
+    full_name,
+    profession,
+    phone_number,
+    additional_number,
+    post_title,
+    post_desc,
+    category_name,
+    sub_category,
+  } = req.body;
+  const { img } = req.files;
+  // ----------------
+  const filePath = Date.now() + img.name.replace(/\s/g, "");
+  // ----------------
+  const newPost = {
+    post_id: Posts.at(-1)?.post_id + 1 || 1,
+    img: filePath,
+    full_name,
+    profession,
+    direction,
+    int_direction,
+    event,
+    link,
+    phone_number,
+    additional_number,
+    post_title,
+    post_desc,
+    date,
+    time,
+    category_name,
+    sub_category,
+    saw: 0,
+    isActive: false,
+  };
+  // -------------
 
-    img.mv(resolve("uploads", filePath));
-    // -------------
-    Posts.push(newPost);
-    write("posts", Posts);
-    res.status(200).json({
-      status: 200,
-      message: "success",
-      data: newPost,
-    });
-  } catch (error) {
-    return next(new InternalServerError(500, "Internal Server Error"));
-  }
+  img.mv(resolve("uploads", filePath));
+  // -------------
+  Posts.push(newPost);
+  write("posts", Posts);
+  res.status(200).json({
+    status: 200,
+    message: "success",
+    data: newPost,
+  });
+  // } catch (error) {
+  //   return next(new InternalServerError(500, "Internal Server Error"));
+  // }
 };
 
 const GetPost = (req, res, next) => {

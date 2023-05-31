@@ -38,7 +38,7 @@ const EventType = (req, res, next) => {
     const Chacked = read("chacked");
     let { event } = req.body;
 
-    let rest = Chacked.filter((event) => event.event == event);
+    let rest = Chacked.filter((evt) => evt.event == event);
     res.status(200).json({
       status: 200,
       message: "success",

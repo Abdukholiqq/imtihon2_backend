@@ -1,40 +1,38 @@
-// import swaggerJSDoc from "swagger-jsdoc";
-// import swaggerUI from "swagger-ui-express";
+import SwaggerUi from "swagger-ui-express";
+import swaggerJSDoc from "swagger-jsdoc";
+import { Router } from "express";
+// import { PORT } from "./config.js";
 
-// import { Router } from "express";
-// import PORT from "./utils/config.js";
-// import swaggerJSDoc from "swagger-jsdoc";
-// import router from "./router/post.router.js";
+const router = Router();
 
-// const swaggerDocs = swaggerJSDoc({
-//   swaggerDefinition: {
-//     openapi: "3.0.0",
-//     servers: [
-//       {
-//         url: `http://localhost:${PORT}`,
-//         description: "Vebinars site",
-//       },
-//     ],
-//     info: {
-//       title: "Vebinar site",
-//       description: "Vebinar site",
-//     },
-//     components: {
-//       securitySchemas: {
-//         Bearer: {
-//           type: "apiKey",
-//           name: "token",
-//           in: "header",
-//         },
-//       },
-//     },
-//   },
-//   apis: [
-//     `${process.cwd()}/src/swagger/components/*.yaml`,
-//     `${process.cwd()}/src/swagger/docs/*.yaml`,
-//   ],
-// });
+const swaggerDocs = swaggerJSDoc({
+  swaggerDefinition: {
+    openapi: "3.0.0",
+    servers: [
+      {
+        url: `http://localhost:5000`,
+        description: "Vebinars site",
+      },
+    ],
+    info: {
+      title: "Vebinars site",
+      description: "Vebinars site",
+    },
+    components: {
+      securitySchemes: {
+        Bearer: {
+          type: "apiKey",
+          name: "token",
+          in: "header",
+        },
+      },
+    },
+  },
+  apis: [
+    `${process.cwd()}/src/swagger/components/*.yaml`,
+    `${process.cwd()}/src/swagger/docs/*.yaml`,
+  ],
+});
 
-// router.use("/", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
-
-// export default router;
+router.use("/", SwaggerUi.serve, SwaggerUi.setup(swaggerDocs));
+export default router;

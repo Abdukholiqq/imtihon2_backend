@@ -1,5 +1,4 @@
 import Joi from "joi";
-
 export const LoginSchema = Joi.object({
   username: Joi.string().required(),
   password: Joi.string().required(),
@@ -14,8 +13,8 @@ export const PostSchema = Joi.object({
   link: Joi.string().max(100),
   full_name: Joi.string().max(50),
   profession: Joi.string().max(50),
-  phone_number: Joi.number().max(12),
-  additional_number: Joi.number().max(12),
+  phone_number: Joi.number().max(14),
+  additional_number: Joi.number().max(14),
   post_title: Joi.string().max(50),
   post_desc: Joi.string().max(5000),
   category_name: Joi.string().max(32),

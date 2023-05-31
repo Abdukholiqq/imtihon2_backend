@@ -1,0 +1,147 @@
+/posts:
+  get:
+    tags: [posts]
+    responses:
+      "200":
+        description: all posts
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PostResponse"
+
+  post:
+    tags: [posts]
+    requestBody:
+      content:
+        multipart/form-data:
+          schema:
+            $ref: "#/components/schemas/CreatePost"
+      required: true
+    responses:
+      "201":
+        description: new post
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreatePost"
+
+/admin/posts/{post_id}:
+  put:
+    tags: [chack-post]
+    parameters:
+      - name: post_id
+        in: path
+        required: true
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ChackPost"
+      required: true
+    responses:
+      "200":
+        description: chack post
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChackPost"
+    security:
+      - Bearer:
+          type: auth2
+
+/posts/{post_id}:
+  get:
+    tags: [single posts]
+    parameters:
+      - name: post_id
+        in: path
+        required: true
+    responses:
+      "200":
+        description: single posts
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Single"
+
+/category:
+  get:
+    tags: [filter]
+    responses:
+      "200":
+        description: category posts
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Category"
+
+/subcategory:
+  get:
+    tags: [filter]
+    responses:
+      "200":
+        description: subcategory filter posts
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/subCategory"
+
+/category/{category_name}:
+  get:
+    tags: [filter]
+    parameters:
+      - name: category_name
+        in: path
+        required: true
+    responses:
+      "200":
+        description: category_name filter posts
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/selectCategory"
+
+/date:
+  post:
+    tags: [filter]
+    parameters:
+      - name: filter by date
+        in: path
+        required: true
+    responses:
+      "200":
+        description: filter by date
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Date"
+
+/name:
+  post:
+    tags: [filter]
+    parameters:
+      - name: filter by full_name
+        in: path
+        required: true
+    responses:
+      "200":
+        description: filter by full_name
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Name"
+
+/event:
+  post:
+    tags: [filter]
+    parameters:
+      - name: filter by name
+        in: path
+        required: true
+    responses:
+      "200":
+        description: filter by event type
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Event"

@@ -1,0 +1,22 @@
+/login:
+  post:
+    tags: [login]
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Login"
+      required: true
+    responses:
+      "200":
+        description: login users
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Response"
+      "400":
+        description: error message
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ErrorResponse"

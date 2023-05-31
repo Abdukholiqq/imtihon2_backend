@@ -1,0 +1,261 @@
+components:
+  schemas:
+    PostResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+        message:
+          type: string
+        data:
+          type: array
+        items:
+          type: object
+          properties:
+            post_id:
+              type: integer
+            img:
+              type: string
+            full_name:
+              type: string
+            profession:
+              type: string
+            direction:
+              type: string
+            int_direction:
+              type: string
+            event:
+              type: string
+            link:
+              type: string
+            phone_number:
+              type: integer
+            additional_number:
+              type: integer
+            post_title:
+              type: string
+            post_desc:
+              type: string
+            date:
+              type: string
+            time:
+              type: string
+            category_name:
+              type: string
+            sub_category:
+              type: string
+            saw:
+              type: integer
+            isActive:
+              type: integer
+
+    CreatePost:
+      type: object
+      properties:
+        img:
+          type: string
+          format: binary
+        full_name:
+          type: string
+        profession:
+          type: string
+        direction:
+          type: string
+        int_direction:
+          type: string
+        event:
+          type: string
+        link:
+          type: string
+        phone_number:
+          type: integer
+        additional_number:
+          type: integer
+        post_title:
+          type: string
+        post_desc:
+          type: string
+        date:
+          type: string
+        time:
+          type: string
+        category_name:
+          type: string
+        sub_category:
+          type: string
+
+    ChackPost:
+      type: object
+      properties:
+        isActive:
+          type: boolean
+
+    Single:
+      type: object
+      properties:
+        img:
+          type: string
+          format: binary
+        full_name:
+          type: string
+        profession:
+          type: string
+        direction:
+          type: string
+        int_direction:
+          type: string
+        event:
+          type: string
+        link:
+          type: string
+        phone_number:
+          type: integer
+        additional_number:
+          type: integer
+        post_title:
+          type: string
+        post_desc:
+          type: string
+        date:
+          type: string
+        time:
+          type: string
+        category_name:
+          type: string
+        sub_category:
+          type: string
+
+    Category:
+      type: object
+      properties:
+        category_id:
+          type: integer
+        category_name:
+          type: string
+        subCategories:
+          type: array
+
+    selectCategory:
+      type: object
+      properties:
+        category_id:
+          type: integer
+        category_name:
+          type: string
+        Posts:
+          type: array
+
+    subCategory:
+      type: object
+      properties:
+        category_id:
+          type: integer
+        category_name:
+          type: string
+        Posts:
+          type: array
+
+    Name:
+      type: object
+      properties:
+        img:
+          type: string
+          format: binary
+        full_name:
+          type: string
+        profession:
+          type: string
+        direction:
+          type: string
+        int_direction:
+          type: string
+        event:
+          type: string
+        link:
+          type: string
+        phone_number:
+          type: integer
+        additional_number:
+          type: integer
+        post_title:
+          type: string
+        post_desc:
+          type: string
+        date:
+          type: string
+        time:
+          type: string
+        category_name:
+          type: string
+        sub_category:
+          type: string
+
+    Date:
+      type: object
+      properties:
+        img:
+          type: string
+          format: binary
+        full_name:
+          type: string
+        profession:
+          type: string
+        direction:
+          type: string
+        int_direction:
+          type: string
+        event:
+          type: string
+        link:
+          type: string
+        phone_number:
+          type: integer
+        additional_number:
+          type: integer
+        post_title:
+          type: string
+        post_desc:
+          type: string
+        date:
+          type: string
+        time:
+          type: string
+        category_name:
+          type: string
+        sub_category:
+          type: string
+
+    Event:
+      type: object
+      properties:
+        img:
+          type: string
+          format: binary
+        full_name:
+          type: string
+        profession:
+          type: string
+        direction:
+          type: string
+        int_direction:
+          type: string
+        event:
+          type: string
+        link:
+          type: string
+        phone_number:
+          type: integer
+        additional_number:
+          type: integer
+        post_title:
+          type: string
+        post_desc:
+          type: string
+        date:
+          type: string
+        time:
+          type: string
+        category_name:
+          type: string
+        sub_category:
+          type: string
