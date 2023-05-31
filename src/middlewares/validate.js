@@ -6,7 +6,6 @@ export default (req, res, next) => {
       const { error } = LoginSchema.validate(req.body);
       if (error) throw Error(error);
     }
-
     if (req.url == "/posts" && req.method == "POST") {
       const {
         date,

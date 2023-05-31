@@ -6,6 +6,7 @@ export default (req, res, next) => {
     if (!token) {
       throw new Error("token required");
     }
+
     const { userId } = jwt.verify(token);
     req.userId = userId;
     next();

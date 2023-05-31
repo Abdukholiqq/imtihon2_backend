@@ -1,4 +1,5 @@
 import { Router } from "express";
+
 import login from "../controller/login.js";
 import validate from "../middlewares/validate.js";
 import post from "../controller/post.js";

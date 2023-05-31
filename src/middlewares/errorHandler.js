@@ -4,7 +4,6 @@ export default (err, req, res, next) => {
       .status(400)
       .json({ status: 400, name: err.name, message: err.message });
   }
-
   return res
     .status(500)
     .json({ status: 500, name: err.name, message: err.message });
