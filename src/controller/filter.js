@@ -4,7 +4,7 @@ import { read } from "../utils/model.js";
 const DateFilter = (req, res, next) => {
   try {
     const Chacked = read("chacked");
-    let { date } = req.body;
+    let { date } = req.params;
 
     let rest = Chacked.filter((time) => time.date == date);
     res.status(200).json({
@@ -20,7 +20,7 @@ const DateFilter = (req, res, next) => {
 const FullName = (req, res, next) => {
   try {
     const Chacked = read("chacked");
-    let { full_name } = req.body;
+    let { full_name } = req.params;
 
     let rest = Chacked.filter((name) => name.full_name == full_name);
     res.status(200).json({
@@ -36,7 +36,7 @@ const FullName = (req, res, next) => {
 const EventType = (req, res, next) => {
   try {
     const Chacked = read("chacked");
-    let { event } = req.body;
+    let { event } = req.params;
 
     let rest = Chacked.filter((evt) => evt.event == event);
     res.status(200).json({

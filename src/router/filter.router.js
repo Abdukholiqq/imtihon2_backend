@@ -10,8 +10,8 @@ router.get("/category", category.Categories);
 router.get("/subcategory", subCategory.subCategories);
 router.get("/category/:category_name", category.selectCategory);
 //   filter
-router.post("/date", filter.DateFilter);
-router.post("/name", filter.FullName);
-router.post("/event", filter.EventType);
+router.get("/posts/date/:date", filter.DateFilter);
+router.get("/posts/name/:full_name", filter.FullName);
+router.get("/posts/event/:event", filter.EventType);
 
 export default router;

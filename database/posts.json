@@ -174,5 +174,25 @@
         "sub_category": "Menegment",
         "saw": 0,
         "isActive": false
+    },
+    {
+        "post_id": 10,
+        "img": "1685589596663bugatti.jpg",
+        "full_name": "bugatti",
+        "profession": "adfghj",
+        "direction": "aghjk",
+        "int_direction": "asghj",
+        "event": "online",
+        "link": "asdfghj",
+        "phone_number": "123456789",
+        "additional_number": "23456789",
+        "post_title": "asjk",
+        "post_desc": "lkgfd",
+        "date": "01-06-23",
+        "time": "8:19",
+        "category_name": "Dizayn",
+        "sub_category": "Grafik dizayn",
+        "saw": 0,
+        "isActive": false
     }
 ]

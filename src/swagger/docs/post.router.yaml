@@ -101,11 +101,11 @@
             schema:
               $ref: "#/components/schemas/selectCategory"
 
-/date:
-  post:
+/posts/date/{date}:
+  get:
     tags: [filter]
     parameters:
-      - name: filter by date
+      - name: date
         in: path
         required: true
     responses:
@@ -116,11 +116,11 @@
             schema:
               $ref: "#/components/schemas/Date"
 
-/name:
-  post:
+/posts/name/{full_name}:
+  get:
     tags: [filter]
     parameters:
-      - name: filter by full_name
+      - name: full_name
         in: path
         required: true
     responses:
@@ -131,11 +131,11 @@
             schema:
               $ref: "#/components/schemas/Name"
 
-/event:
-  post:
+/posts/event/{event}:
+  get:
     tags: [filter]
     parameters:
-      - name: filter by name
+      - name: event
         in: path
         required: true
     responses:
