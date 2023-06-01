@@ -60,24 +60,6 @@
         "isActive": false
     },
     {
-        "post_id": 4,
-        "img": "1685548840775images.jpg",
-        "full_name": "Ferrari company",
-        "profession": "Dizayn",
-        "direction": "Dizayn",
-        "int_direction": "Grafik dizayn",
-        "event": "meeting",
-        "link": "https://www.ferrari.com",
-        "phone_number": "998788889888 ",
-        "additional_number": "998788889888",
-        "post_title": "Ferari",
-        "post_desc": "Ferrari S.p.A. is an Italian luxury sports car manufacturer based in Maranello, Italy.",
-        "date": "05-31-23",
-        "time": "8:51",
-        "saw": 0,
-        "isActive": false
-    },
-    {
         "post_id": 5,
         "img": "1685549864475images.jpg",
         "full_name": "Ferrari company",

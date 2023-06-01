@@ -1,6 +1,9 @@
 /posts:
   get:
     tags: [posts]
+    parameters:
+      - in: query
+        name: page
     responses:
       "200":
         description: all posts
